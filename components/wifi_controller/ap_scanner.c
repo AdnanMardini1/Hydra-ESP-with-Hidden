@@ -14,8 +14,7 @@ void wifictl_scan_nearby_aps(){
  .bssid=NULL,
  .channel=0,
  .scan_type=WIFI_SCAN_TYPE_ACTIVE,
- .show_hidden=true
- };
+ .show_hidden=true};
  ESP_ERROR_CHECK(esp_wifi_scan_start(&scan_config,true));
  ESP_ERROR_CHECK(esp_wifi_scan_get_ap_records(&ap_records.count,ap_records.records));
  ESP_LOGI(TAG,"Found %u APs.",ap_records.count);
